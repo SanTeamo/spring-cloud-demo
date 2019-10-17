@@ -1,0 +1,12 @@
+spring:
+  # profile=master
+  profiles: master
+server:
+  port: 8760
+eureka:
+  instance:
+    hostname: register-master
+  client:
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://register-slave1:8761/eureka/,http://register-slave2:8762/eureka/
