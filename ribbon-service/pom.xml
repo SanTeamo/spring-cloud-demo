@@ -7,9 +7,9 @@
         <artifactId>spring-cloud-demo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>ribbon</artifactId>
+    <artifactId>ribbon-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ribbon</name>
+    <name>ribbon-service</name>
     <description>Demo project for ribbon</description>
 
 
@@ -40,13 +40,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-    </repositories>
 
 </project>
