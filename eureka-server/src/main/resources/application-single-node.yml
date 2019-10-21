@@ -1,6 +1,6 @@
 spring:
-  # profile=default
-  profiles: default
+  # profile = single-node
+  profiles: single-node
 server:
   port: 8760
 eureka:

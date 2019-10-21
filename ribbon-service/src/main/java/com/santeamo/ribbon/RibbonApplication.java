@@ -1,19 +1,28 @@
-package com.santeamo.eureka.client;
+package com.santeamo.ribbon;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class EurekaClientApplication {
+public class RibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(RibbonApplication.class, args);
+    }
+
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 
     @Value("${server.port}")
@@ -24,7 +33,7 @@ public class EurekaClientApplication {
 
     @GetMapping("/")
     public String index(){
-        return "serviceName=" + serviceName + "-------port=" + port;
+        return restTemplate().getForObject("http://eureka-client/",String.class);
     }
 
 }

@@ -1,0 +1,11 @@
+Spring:
+  application:
+    name: ribbon-service
+server:
+  port: 8777
+eureka:
+  instance:
+    hostname: ribbon-service
+  client:
+    service-url:
+      defaultZone: http://register-master:8760/eureka/

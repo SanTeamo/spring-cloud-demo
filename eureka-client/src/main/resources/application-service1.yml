@@ -1,0 +1,13 @@
+spring:
+  application:
+    #应用名称
+    name: eureka-client
+  profiles:
+    service1
+server:
+  port: 8761
+eureka:
+  client:
+    service-url:
+      #注入目标，配置服务中心url，与服务端的配置保持一致
+      defaultZone: http://register-master:8760/eureka/
