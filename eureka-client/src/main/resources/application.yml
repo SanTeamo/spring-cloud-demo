@@ -2,8 +2,3 @@ spring:
   application:
     #应用名称
     name: eureka-client
-eureka:
-  client:
-    service-url:
-      #注入目标，配置服务中心url，与服务端的配置保持一致
-      defaultZone: http://register-master:8760/eureka/,http://register-slave1:8761/eureka/,http://register-slave2:8762/eureka/
