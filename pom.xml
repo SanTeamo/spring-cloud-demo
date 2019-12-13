@@ -20,6 +20,8 @@
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>ribbon-service</module>
+        <module>feign-service</module>
+        <module>model</module>
     </modules>
 
     <properties>
