@@ -1,2 +1,3 @@
 # spring-cloud-demo
-## 项目地址
+
+对应教程：[github](https://github.com/SanTeamo/note/tree/master/java/springcloud)
